@@ -1,12 +1,23 @@
-# web
+# Blog Web UI
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+Angular UI for [Blog API](https://github.com/eddiejaoude/blog-api) 
+
+## Dependencies
+
+* Angular
+* Bootstrap v4
+* Protractor
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+* Install UI dependencies `bower install`
+* Install node dependencies `npm install`
+* Run `grunt serve` for preview
+* A browser tab should open with `http://localhost:9000/#/`
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+* Install **Protractor** `npm install -g protractor`
+* Update binaries `webdriver-manager update`
+* Start **Selenium** `webdriver-manager start`
+* Run `protractor test/e2e/protractor.conf.js`

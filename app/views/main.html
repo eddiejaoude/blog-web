@@ -1,5 +1,5 @@
 <div class="blogs" ng-controller="MainCtrl as mc" ng-init="mc.getPosts()">
-  <div class="card" ng-repeat="post in mc.posts">
+    <div class="card" ng-repeat="post in mc.posts">
     <div class="card-header">
       {{ post.title }}
     </div>
@@ -7,7 +7,7 @@
       <p class="card-text">{{ post.description }}</p>
     </div>
     <div class="card-footer text-muted">
-      Created on {{ post.createdAt | date:"MM/dd/yyyy 'at' h:mma" }}, Updated on {{ post.updatedAt | date:"MM/dd/yyyy 'at' h:mma" }}
+      Created at {{ post.createdAt | date:"MM/dd/yyyy 'at' h:mma" }}, Updated at {{ post.updatedAt | date:"MM/dd/yyyy 'at' h:mma" }}
     </div>
   </div>
 </div>

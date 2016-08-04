@@ -25,6 +25,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/tags', {
+        templateUrl: 'views/tags.html',
+        controller: 'TagsCtrl',
+        controllerAs: 'tags'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -2,7 +2,7 @@
 
 var mainPageObject = require('./mainPageObject.js');
 
-describe('Blog home page displays a list of Posts', function () {
+describe('Home page displays a list of Posts', function () {
 
   beforeEach(function () {
     mainPageObject.get();

@@ -28,10 +28,10 @@ describe('Create a Tag', function () {
   });
 
   it('should be in Tag list', function () {
+    tagListPageObject.get();
+
     var tags = tagListPageObject.getTags();
 
-    var data = element.all(by.repeater('tag in tc.tags').column('tag.name'));
-
-    expect(data.getText()).toContain(name);
+    expect(tags.getText()).toContain(name);
   });
 });

@@ -9,7 +9,10 @@ body {
   padding: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+.navbar {
+  margin-bottom: 2rem;
+}
+
 .navbar,
 .marketing,
 .footer {
@@ -32,6 +35,7 @@ body {
 
 /* Custom page footer */
 .footer {
+  margin-top:2rem;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -80,4 +84,8 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.blogs .tag {
+  margin:0.3rem;
 }

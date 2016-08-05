@@ -1,4 +1,4 @@
-var TagPageObject = function () {
+var TagListPageObject = function () {
   var tagList = element.all(by.css('.tags tbody tr'));
 
   this.get = function () {
@@ -10,4 +10,4 @@ var TagPageObject = function () {
   };
 };
 
-module.exports = new TagPageObject();
+module.exports = new TagListPageObject();

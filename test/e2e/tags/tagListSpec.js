@@ -1,14 +1,14 @@
 'use strict';
 
-var tagPageObject = require('./tagPageObject.js');
+var tagListPageObject = require('./tagListPageObject.js');
 
 describe('Tag page displays a list of Tags', function () {
 
   beforeEach(function () {
-    tagPageObject.get();
+    tagListPageObject.get();
   });
 
   it('should have a list of Posts', function () {
-    expect(tagPageObject.getTags()).toBeGreaterThan('0');
+    expect(tagListPageObject.getTags()).toBeGreaterThan('0');
   });
 });

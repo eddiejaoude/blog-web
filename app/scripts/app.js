@@ -30,7 +30,13 @@ angular
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })
+      .when('/tags/create', {
+        templateUrl: 'views/tagsCreate.html',
+        controller: 'TagsCtrl',
+        controllerAs: 'tags'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+;

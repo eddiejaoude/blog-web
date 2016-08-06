@@ -5,9 +5,11 @@
     </div>
     <div class="card-block">
       <p class="card-text">{{ post.description }}</p>
+      <span class="tag tag-info" ng-repeat="tag in post.tags">{{ tag.name }}</span>
     </div>
     <div class="card-footer text-muted">
-      Created at {{ post.createdAt | date:"MM/dd/yyyy 'at' h:mma" }}, Updated at {{ post.updatedAt | date:"MM/dd/yyyy 'at' h:mma" }}
+      Created <span am-time-ago="post.createdAt">{{ post.createdAt | date:"MM/dd/yyyy 'at' h:mma" }}</span>,
+      Updated <span am-time-ago="post.createdAt">{{ post.updatedAt | date:"MM/dd/yyyy 'at' h:mma" }}</span>
     </div>
   </div>
 </div>

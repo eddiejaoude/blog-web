@@ -7,6 +7,7 @@ Angular UI for [Blog API](https://github.com/eddiejaoude/blog-api)
 * Angular
 * Bootstrap v4
 * Protractor
+* Blog API https://github.com/eddiejaoude/blog-api
 
 ## Build & development
 

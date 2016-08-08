@@ -1,5 +1,5 @@
 <div class="row">
-  <a id="createButton" href="#/tags/create" class="btn btn-primary">
+  <a id="createButton" href="#/tags/create" class="btn btn-primary" title="Create new Tag">
     <i class="fa fa-plus-circle" aria-hidden="true"></i>
   </a>
 </div>
@@ -11,17 +11,15 @@
       <th>Name</th>
       <th>Created At</th>
       <th>Updated At</th>
-      <th>Actions</th>
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="tag in tc.tags">
-      <td scope="row">{{ tag.name }}</td>
+      <td scope="row">
+        <a href="#/tags/{{ tag.id }}">{{ tag.name }}</a>
+      </td>
       <td am-time-ago="tag.createdAt">{{ tag.createdAt | date:"MM/dd/yyyy 'at' h:mma" }}</td>
       <td am-time-ago="tag.updatedAt">{{ tag.updatedAt | date:"MM/dd/yyyy 'at' h:mma" }}</td>
-      <td>
-        ---
-      </td>
     </tr>
     </tbody>
   </table>

@@ -26,13 +26,18 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/tags', {
-        templateUrl: 'views/tags.html',
+      .when('/tags/create', {
+        templateUrl: 'views/tagsCreate.html',
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })
-      .when('/tags/create', {
-        templateUrl: 'views/tagsCreate.html',
+      .when('/tags/:id', {
+        templateUrl: 'views/tag.html',
+        controller: 'TagsCtrl',
+        controllerAs: 'tags'
+      })
+      .when('/tags', {
+        templateUrl: 'views/tags.html',
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })

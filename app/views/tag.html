@@ -25,9 +25,13 @@
   </div>
 
   <div class="row">
-    <button class="btn btn-danger" title="Delete" ng-click="tc.delete()" id="delete">
-      <i class="fa fa-arrow-circle-cross" aria-hidden="true"></i>
+    <a class="btn btn-danger" title="Delete" ng-click="tc.delete(tc.tag.id)" id="deleteButton">
+      <i class="fa fa-minus-circle" aria-hidden="true"></i>
       Delete
-    </button>
+    </a>
+    <a href="#/tags/{{ tc.tag.id }}/edit" class="btn btn-warning" title="Update" id="editButton">
+      <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+      Edit
+    </a>
   </div>
 </div>

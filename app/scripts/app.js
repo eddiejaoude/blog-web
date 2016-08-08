@@ -36,6 +36,11 @@ angular
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })
+      .when('/tags/:id/edit', {
+        templateUrl: 'views/tagEdit.html',
+        controller: 'TagsCtrl',
+        controllerAs: 'tags'
+      })
       .when('/tags', {
         templateUrl: 'views/tags.html',
         controller: 'TagsCtrl',

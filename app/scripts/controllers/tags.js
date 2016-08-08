@@ -22,8 +22,8 @@ angular.module('webApp')
       self.findById($routeParams.id);
     };
 
-    self.delete = function () {
-      $http.delete(host + '/tags/' + $routeParams.id).then(function(response) {
+    self.delete = function (id) {
+      $http.delete(host + '/tags/' + id).then(function(response) {
         self.tag = response.data;
         $location.path('/tags');
       });
@@ -37,6 +37,13 @@ angular.module('webApp')
 
     self.create = function(tag) {
       $http.post(host + '/tags', tag).then(function(response) {
+        self.tag = response.data;
+        $location.path('/tags');
+      });
+    };
+
+    self.save = function(tag) {
+      $http.put(host + '/tags/' + tag.id, tag).then(function(response) {
         self.tag = response.data;
         $location.path('/tags');
       });

@@ -8,12 +8,11 @@
  * Controller of the webApp
  */
 angular.module('webApp')
-  .controller('PostsCtrl', function ($http, $routeParams, $location) {
+  .controller('PostsCtrl', function ($routeParams, $location, postService) {
     var self = this;
-    var host = 'http://localhost:3000';
 
     this.findAll = function() {
-      $http.get(host + '/posts').then(function(response) {
+      postService.findAll().then(function(response) {
         self.posts = response.data;
       });
     };
@@ -23,27 +22,27 @@ angular.module('webApp')
     };
 
     self.findById = function(id) {
-      $http.get(host + '/posts/' + id).then(function(response) {
+      postService.findById(id).then(function(response) {
         self.post = response.data;
       });
     };
 
     self.create = function(post) {
-      $http.post(host + '/posts', post).then(function(response) {
+      postService.create(post).then(function(response) {
         self.post = response.data;
         $location.path('/posts');
       });
     };
 
     self.delete = function (id) {
-      $http.delete(host + '/posts/' + id).then(function(response) {
+      postService.delete(id).then(function(response) {
         self.post = response.data;
         $location.path('/posts');
       });
     };
 
     self.save = function(post) {
-      $http.put(host + '/posts/' + post.id, post).then(function(response) {
+      postService.save(post).then(function(response) {
         self.post = response.data;
         $location.path('/posts');
       });

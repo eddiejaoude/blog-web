@@ -8,12 +8,11 @@
  * Controller of the webApp
  */
 angular.module('webApp')
-  .controller('TagsCtrl', function ($http, $routeParams, $location) {
+  .controller('TagsCtrl', function ($routeParams, $location, tagService) {
     var self = this;
-    var host = 'http://localhost:3000';
 
     self.findAll = function() {
-      $http.get(host + '/tags').then(function(response) {
+      tagService.findAll().then(function(response) {
         self.tags = response.data;
       });
     };
@@ -23,27 +22,27 @@ angular.module('webApp')
     };
 
     self.delete = function (id) {
-      $http.delete(host + '/tags/' + id).then(function(response) {
+      tagService.delete(id).then(function(response) {
         self.tag = response.data;
         $location.path('/tags');
       });
     };
 
     self.findById = function(id) {
-      $http.get(host + '/tags/' + id).then(function(response) {
+      tagService.findById(id).then(function(response) {
         self.tag = response.data;
       });
     };
 
     self.create = function(tag) {
-      $http.post(host + '/tags', tag).then(function(response) {
+      tagService.create(tag).then(function(response) {
         self.tag = response.data;
         $location.path('/tags');
       });
     };
 
     self.save = function(tag) {
-      $http.put(host + '/tags/' + tag.id, tag).then(function(response) {
+      tagService.save(tag).then(function(response) {
         self.tag = response.data;
         $location.path('/tags');
       });

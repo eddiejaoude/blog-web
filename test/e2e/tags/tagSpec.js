@@ -1,9 +1,10 @@
 'use strict';
 
-var tagListPageObject = require('./tagListPageObject.js');
-var tagDetailsPageObject = require('./tagDetailsPageObject.js');
-var tagCreatePageObject = require('./tagCreatePageObject.js');
-var tagEditPageObject = require('./tagEditPageObject.js');
+var tagListPageObject = require('./pageObjects/listPageObject.js');
+var tagDetailsPageObject = require('./pageObjects/detailsPageObject.js');
+var tagCreatePageObject = require('./pageObjects/createPageObject.js');
+var tagEditPageObject = require('./pageObjects/editPageObject.js');
+
 var KeyGenerator = require('uuid-key-generator');
 
 var keygen = new KeyGenerator();

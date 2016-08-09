@@ -1,12 +1,12 @@
 'use strict';
 
-var tagListPageObject = require('../tags/tagListPageObject.js');
-var tagCreatePageObject = require('../tags/tagCreatePageObject.js');
-var tagDetailsPageObject = require('../tags/tagDetailsPageObject.js');
-var postListPageObject = require('./postListPageObject.js');
-var postCreatePageObject = require('./postCreatePageObject.js');
-var postEditPageObject = require('./postEditPageObject.js');
-var postDetailsPageObject = require('./postDetailsPageObject.js');
+var tagListPageObject = require('../tags/pageObjects/listPageObject.js');
+var tagCreatePageObject = require('../tags/pageObjects/createPageObject.js');
+var tagDetailsPageObject = require('../tags/pageObjects/detailsPageObject.js');
+var postListPageObject = require('./pageObjects/listPageObject.js');
+var postCreatePageObject = require('./pageObjects/createPageObject.js');
+var postEditPageObject = require('./pageObjects/editPageObject.js');
+var postDetailsPageObject = require('./pageObjects/detailsPageObject.js');
 
 var KeyGenerator = require('uuid-key-generator');
 

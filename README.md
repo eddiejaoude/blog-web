@@ -24,3 +24,7 @@ Angular UI for [Blog API](https://github.com/eddiejaoude/blog-api)
 * Run `protractor test/e2e/protractor.conf.js`
 
 Or a particular test suite `protractor test/e2e/protractor.conf.js --suite tags`
+
+## Future considerations
+
+* Parse API validation errors 

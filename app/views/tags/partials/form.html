@@ -1,5 +1,11 @@
-<div class="form-group">
+<div class="form-group"
+     ng-class="tagForm.name.$error.required || tagForm.name.$error.minlength || tagForm.name.$error.maxlength ? 'has-danger' : '' ">
   <label for="name">Name</label>
-  <input type="text" class="form-control" id="name" name="name" placeholder="Tag name" ng-model="tc.tag.name">
+  <input type="text" class="form-control" id="name" name="name" placeholder="Tag name" ng-model="tc.tag.name"
+         ng-minlength="3" ng-maxlength="24" required
+         ng-class="tagForm.name.$error.required || tagForm.name.$error.minlength || tagForm.name.$error.maxlength ? 'form-control-danger' : '' ">
+  <div class="form-control-feedback" ng-show="tagForm.name.$error.required">Required!</div>
+  <div class="form-control-feedback" ng-show="tagForm.name.$error.minlength">Too short!</div>
+  <div class="form-control-feedback" ng-show="tagForm.name.$error.maxlength">Too long!</div>
 </div>
 <button type="submit" class="btn btn-primary">Save</button>

@@ -39,6 +39,15 @@ describe('Create Post with Tag, see in List, view Post details, edit Post with a
     expect(browser.getCurrentUrl()).toEqual('http://localhost:9000/#/posts/create');
   });
 
+  it('should not create an invalid Post', function () {
+    postCreatePageObject.setTitle(title);
+    postCreatePageObject.setTags([name]);
+
+    postCreatePageObject.submit();
+
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:9000/#/posts/create');
+  });
+
   it('should create a Post', function () {
     postCreatePageObject.setTitle(title);
     postCreatePageObject.setDescription(description);

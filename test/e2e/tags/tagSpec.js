@@ -24,6 +24,12 @@ describe('Create a Tag, see in list, view Tag details, edit Tag, delete Tag, not
     expect(browser.getCurrentUrl()).toEqual('http://localhost:9000/#/tags/create');
   });
 
+  it('should not create an invalid Tag', function () {
+    tagCreatePageObject.submit();
+
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:9000/#/tags/create');
+  });
+
   it('should create a Tag', function () {
     tagCreatePageObject.setName(name);
 

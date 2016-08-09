@@ -1,10 +1,23 @@
-<div class="form-group">
+<div class="form-group"
+     ng-class="postForm.title.$error.required || postForm.title.$error.minlength || postForm.title.$error.maxlength ? 'has-danger' : '' ">
   <label for="title">Title</label>
-  <input type="text" class="form-control" id="title" name="title" placeholder="Post title" ng-model="pc.post.title">
+  <input type="text" class="form-control" id="title" name="title" placeholder="Post title" ng-model="pc.post.title"
+         ng-minlength="3" ng-maxlength="32" required
+         ng-class="postForm.title.$error.required || postForm.title.$error.minlength || postForm.title.$error.maxlength ? 'form-control-danger' : '' ">
+  <div class="form-control-feedback" ng-show="postForm.title.$error.required">Required!</div>
+  <div class="form-control-feedback" ng-show="postForm.title.$error.minlength">Too short!</div>
+  <div class="form-control-feedback" ng-show="postForm.title.$error.maxlength">Too long!</div>
 </div>
-<div class="form-group">
+<div class="form-group"
+     ng-class="postForm.description.$error.required || postForm.description.$error.minlength || postForm.description.$error.maxlength ? 'has-danger' : '' ">
   <label for="description">Description</label>
-  <input type="text" class="form-control" id="description" name="description" placeholder="Post description" ng-model="pc.post.description">
+  <input type="text" class="form-control" id="description" name="description" placeholder="Post description"
+         ng-minlength="12" ng-maxlength="512" required
+         ng-model="pc.post.description"
+         ng-class="postForm.description.$error.required || postForm.description.$error.minlength || postForm.description.$error.maxlength ? 'form-control-danger' : '' ">
+  <div class="form-control-feedback" ng-show="postForm.description.$error.required">Required!</div>
+  <div class="form-control-feedback" ng-show="postForm.description.$error.minlength">Too short!</div>
+  <div class="form-control-feedback" ng-show="postForm.description.$error.maxlength">Too long!</div>
 </div>
 <div class="form-group">
   <label for="tags">Example multiple select</label>

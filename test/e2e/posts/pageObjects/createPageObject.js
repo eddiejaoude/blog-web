@@ -9,11 +9,11 @@ var PostCreatePageObject = function () {
   };
 
   this.setTitle = function(title) {
-    titleInput.sendKeys(title);
+    titleInput.clear().sendKeys(title);
   };
 
   this.setDescription = function(description) {
-    descriptionInput.sendKeys(description);
+    descriptionInput.clear().sendKeys(description);
   };
 
   this.setTags = function(tags) {

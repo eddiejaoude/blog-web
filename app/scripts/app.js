@@ -22,12 +22,27 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl',
+        controllerAs: 'posts'
+      })
+      .when('/posts/create', {
+        templateUrl: 'views/postCreate.html',
+        controller: 'PostsCtrl',
+        controllerAs: 'posts'
+      })
+      .when('/posts/:id', {
+        templateUrl: 'views/post.html',
+        controller: 'PostsCtrl',
+        controllerAs: 'posts'
+      })
+      .when('/posts/:id/edit', {
+        templateUrl: 'views/postEdit.html',
+        controller: 'PostsCtrl',
+        controllerAs: 'posts'
       })
       .when('/tags/create', {
-        templateUrl: 'views/tagsCreate.html',
+        templateUrl: 'views/tagCreate.html',
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })

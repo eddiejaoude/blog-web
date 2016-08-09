@@ -1,5 +1,6 @@
 var TagDetailsPageObject = function () {
   var name = element(by.css('h2'));
+  var postListTitles = element.all(by.repeater('post in tc.tag.posts').column('post.title'));
   var deleteButton = element(by.css('#deleteButton'));
   var editButton = element(by.css('#editButton'));
 
@@ -21,6 +22,10 @@ var TagDetailsPageObject = function () {
 
   this.clickDelete = function() {
     return deleteButton.click();
+  };
+
+  this.getPostListTitles = function () {
+    return postListTitles;
   };
 };
 

@@ -1,0 +1,21 @@
+<div class="row">
+  <a id="createButton" href="#/posts/create" class="btn btn-primary" title="Create new Post">
+    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+  </a>
+</div>
+
+<div class="row blogs" ng-controller="PostsCtrl as pc" ng-init="pc.findAll()">
+    <div class="card" ng-repeat="post in pc.posts">
+    <div class="card-header">
+      <a href="#/posts/{{ post.id }}">{{ post.title }}</a>
+    </div>
+    <div class="card-block">
+      <p class="card-text">{{ post.description | limitTo:100 }}</p>
+      <a href="#/tags/{{ tag.id }}" class="tag tag-info" ng-repeat="tag in post.tags">{{ tag.name }}</a>
+    </div>
+    <div class="card-footer text-muted">
+      Created <span am-time-ago="post.createdAt">{{ post.createdAt | date:"MM/dd/yyyy 'at' h:mma" }}</span>,
+      Updated <span am-time-ago="post.createdAt">{{ post.updatedAt | date:"MM/dd/yyyy 'at' h:mma" }}</span>
+    </div>
+  </div>
+</div>

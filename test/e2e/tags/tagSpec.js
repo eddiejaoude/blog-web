@@ -18,7 +18,6 @@ describe('Create a Tag, see in list, view Tag details, edit Tag, delete Tag, not
   });
 
   it('should go to the Tag Create page', function () {
-    tagListPageObject.get();
     tagListPageObject.create();
 
     expect(browser.getCurrentUrl()).toEqual('http://localhost:9000/#/tags/create');
@@ -47,10 +46,10 @@ describe('Create a Tag, see in list, view Tag details, edit Tag, delete Tag, not
 
   it('should have an edit button', function () {
     expect(tagDetailsPageObject.getEdit().isPresent()).toBe(true);
-    tagDetailsPageObject.clickEdit();
   });
 
   it('should edit the Tag', function () {
+    tagDetailsPageObject.clickEdit();
     tagEditPageObject.setName(updatedName);
     tagEditPageObject.submit();
   });

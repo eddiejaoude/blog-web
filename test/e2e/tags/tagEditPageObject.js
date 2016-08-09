@@ -3,11 +3,7 @@ var TagEditPageObject = function () {
   var submit = element(by.css('form.tagEdit button'));
 
   this.get = function (id) {
-    browser.get('http://localhost:9000/#/tags/' + id + 'edit');
-  };
-
-  this.clear = function() {
-    nameInput.clear();
+    browser.get('http://localhost:9000/#/tags/' + id + '/edit');
   };
 
   this.setName = function(name) {

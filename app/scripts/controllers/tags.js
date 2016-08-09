@@ -34,13 +34,6 @@ angular.module('webApp')
       });
     };
 
-    self.create = function(tag) {
-      tagService.create(tag).then(function(response) {
-        self.tag = response.data;
-        $location.path('/tags');
-      });
-    };
-
     self.save = function(tag) {
       tagService.save(tag).then(function(response) {
         self.tag = response.data;

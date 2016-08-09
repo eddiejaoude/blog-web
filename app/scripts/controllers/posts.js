@@ -27,13 +27,6 @@ angular.module('webApp')
       });
     };
 
-    self.create = function(post) {
-      postService.create(post).then(function(response) {
-        self.post = response.data;
-        $location.path('/posts');
-      });
-    };
-
     self.delete = function (id) {
       postService.delete(id).then(function(response) {
         self.post = response.data;

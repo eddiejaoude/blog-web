@@ -17,11 +17,11 @@ angular.module('webApp')
       return $http.get(host + '/tags/' + id);
     };
 
-    self.create = function (tag) {
-      return $http.post(host + '/tags', tag);
-    };
-
     self.save = function (tag) {
-      return $http.put(host + '/tags/' + tag.id, tag);
+      if (tag.id) {
+        return $http.put(host + '/tags/' + tag.id, tag);
+      } else {
+        return $http.post(host + '/tags', tag);
+      }
     };
   });

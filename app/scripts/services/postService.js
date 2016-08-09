@@ -22,6 +22,10 @@ angular.module('webApp')
     };
 
     self.save = function (post) {
-      return $http.put(host + '/posts/' + post.id, post);
+      if (post.id) {
+        return $http.put(host + '/posts/' + post.id, post);
+      } else {
+        return $http.post(host + '/posts', post);
+      }
     };
   });

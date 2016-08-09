@@ -22,42 +22,42 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/posts.html',
+        templateUrl: 'views/posts/list.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
       })
       .when('/posts/create', {
-        templateUrl: 'views/postCreate.html',
+        templateUrl: 'views/posts/create.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
       })
       .when('/posts/:id', {
-        templateUrl: 'views/post.html',
+        templateUrl: 'views/posts/view.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
       })
       .when('/posts/:id/edit', {
-        templateUrl: 'views/postEdit.html',
+        templateUrl: 'views/posts/edit.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
       })
       .when('/tags/create', {
-        templateUrl: 'views/tagCreate.html',
+        templateUrl: 'views/tags/create.html',
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })
       .when('/tags/:id', {
-        templateUrl: 'views/tag.html',
+        templateUrl: 'views/tags/view.html',
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })
       .when('/tags/:id/edit', {
-        templateUrl: 'views/tagEdit.html',
+        templateUrl: 'views/tags/edit.html',
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })
       .when('/tags', {
-        templateUrl: 'views/tags.html',
+        templateUrl: 'views/tags/list.html',
         controller: 'TagsCtrl',
         controllerAs: 'tags'
       })

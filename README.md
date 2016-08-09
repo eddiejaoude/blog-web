@@ -25,6 +25,22 @@ Angular UI for [Blog API](https://github.com/eddiejaoude/blog-api)
 
 Or a particular test suite `protractor test/e2e/protractor.conf.js --suite tags`
 
+Example output
+
+```
+$ protractor test/e2e/protractor.conf.js
+              
+[12:22:13] I/hosted - Using the selenium server at http://localhost:4444/wd/hub
+[12:22:13] I/launcher - Running 1 instances of WebDriver
+Started
+...............................
+
+
+31 specs, 0 failures
+Finished in 32.153 seconds
+
+```
+
 ## Future considerations
 
 * Parse API validation errors 

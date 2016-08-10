@@ -11,8 +11,8 @@ Angular UI for [Blog API](https://github.com/eddiejaoude/blog-api)
 
 ## Build & development
 
-* Install UI dependencies `bower install`
 * Install node dependencies `npm install`
+* Install UI dependencies `bower install`
 * Run `grunt serve` for preview
 * A browser tab should open with `http://localhost:9000/#/`
 

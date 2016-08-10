@@ -44,3 +44,8 @@ Finished in 32.153 seconds
 ## Future considerations
 
 * Parse API validation errors 
+* Minify & Uglify js files
+* Authentication 
+* Pagination
+* Use route resolve
+* Move API url to config

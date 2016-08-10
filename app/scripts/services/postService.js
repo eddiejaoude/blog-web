@@ -3,7 +3,7 @@
 angular.module('webApp')
   .service('postService', function ($http) {
     var self = this;
-    var host = 'http://localhost:3000';
+    var host = 'http://localhost:3000'; // @TODO move to config
 
     this.findAll = function () {
       return $http.get(host + '/posts');

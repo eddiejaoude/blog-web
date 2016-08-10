@@ -3,7 +3,7 @@
 angular.module('webApp')
   .service('tagService', function ($http) {
     var self = this;
-    var host = 'http://localhost:3000';
+    var host = 'http://localhost:3000'; // @TODO move to config
 
     self.findAll = function () {
       return $http.get(host + '/tags');
